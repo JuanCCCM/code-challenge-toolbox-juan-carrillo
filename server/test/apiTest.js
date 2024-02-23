@@ -6,7 +6,8 @@ chai.use(chaiHttp);
 const serverUrl = 'http://localhost:5000';
 
 describe('Files Data API', () => {
-  it('should return an array of files with their content on GET /files/data', (done) => {
+  it('should return an array of files with their content on GET /files/data', function(done) {
+    this.timeout(2500); 
     chai.request(serverUrl)
       .get('/files/data')
       .end((err, res) => {

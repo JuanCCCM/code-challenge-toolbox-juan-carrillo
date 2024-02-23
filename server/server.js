@@ -42,7 +42,6 @@ async function downloadAndProcessFile(fileName) {
       console.log(`${fileName} is empty.`);
       return null;
     }
-    console.log(response.data);
     return processCsvData(response.data);
   } catch (error) {
     console.error(`Error downloading ${fileName}:`, error.message);
